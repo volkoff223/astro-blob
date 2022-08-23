@@ -1,35 +1,32 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
-<Layout title="Welcome to theLog.">
+<Layout title="Welcome to theLog." current="">
 	<main>
 		<h1>Welcome to <span class="text-gradient">theLog</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
+		<p class="instructions">Check out the latest blog post!</p>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+				href="#"
+				title="My First Post"
+				body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+				href="#"
+				title="The Terminal"
+				body="non blandit massa enim nec."
 			/>
 			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
+				href="#"
+				title="Using VIM"
+				body="massa eget egestas purus viverra accumsan in."
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
+				href="#"
+				title="Learning"
+				body="in fermentum et sollicitudin ac orci"
 			/>
 		</ul>
 	</main>
@@ -38,6 +35,10 @@ import Card from '../components/Card.astro';
 <style>
 	:root {
 		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+	}
+
+	body {
+		overflow: hidden; /*Hide scrollbars*/
 	}
 
 	h1 {
