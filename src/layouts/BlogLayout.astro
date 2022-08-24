@@ -1,0 +1,15 @@
+---
+import Nav from "../components/Nav.astro";
+const { frontmatter } = Astro.props;
+---
+
+<html>
+    <head>
+        <title>{frontmatter.title}</title>
+    </head>
+    <body>
+        <Nav />
+        <slot />
+        <p>Written on: {frontmatter.date} by {frontmatter.author}</p>
+    </body>
+</html>

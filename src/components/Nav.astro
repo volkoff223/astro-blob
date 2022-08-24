@@ -19,7 +19,11 @@ const { current = "" } = Astro.props;
         text-transform: uppercase;
     }
 
-    a {
+    nav #myLinks {
+        display: block;
+    }
+
+    nav a {
         color: inherit;
         text-decoration: none;
         padding: 10px 5px;
@@ -29,6 +33,11 @@ const { current = "" } = Astro.props;
         min-width: 70px;
         text-align: center;
     }
+
+    nav a.icon {
+        display: block;
+    }
+
     a.selected {
         text-decoration: underline;
     }
