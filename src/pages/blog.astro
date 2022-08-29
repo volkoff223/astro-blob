@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+const posts = await Astro.glob("./posts/*.md"); // returns an array of posts that live at ./src/pages/post/*.md
 ---
 
 <style>
@@ -8,17 +10,48 @@ import Layout from "../layouts/Layout.astro";
         padding: 1em;
         max-width: 60ch;
     }
+
+    /* Add rounded corners to the top left and the top right corner of the image */
+    img {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .card {
+        /* Add shadows to create the "card" effect */
+        margin-top: 5ch;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        border-radius: 5px; /* 5px rounded corners */
+    }
+
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    /* Add some padding inside the card container */
+    .container {
+        padding: 2px 16px;
+    }
 </style>
 
 <Layout title="Blog" current="blog">
     <main>
         <h1>Blog</h1>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            impedit omnis vitae ipsam doloribus repellat molestias cumque
-            ducimus, a recusandae maxime quis inventore soluta ea. Debitis nulla
-            quaerat qui minus!
-        </p>
-        <p>Read more <a href="/posts/post1">Post 1</a></p>
+
+        <div>
+            {
+                posts.slice(0, 4).map((post) => (
+                    <div class="card">
+                        <img src="#" alt="#" style="width:100%" />
+                        <div class="container">
+                            <h2>{post.frontmatter.title}</h2>
+                            <p>{post.frontmatter.description}</p>
+                            <a href={post.frontmatter.url}>Read more</a>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
     </main>
 </Layout>

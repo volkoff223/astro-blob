@@ -1,8 +1,10 @@
 ---
-layout: ../layouts/BlogLayout.astro
+layout: ../../layouts/BlogLayout.astro
 author: "Nicholas Voelker"
 date: "24 Aug 2022"
 title: post2
+description: "Integer vitae justo eget magna fermentum iaculis eu. Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Diam maecenas sed enim ut."
+url: /posts/post2
 ---
 
 # Post 2

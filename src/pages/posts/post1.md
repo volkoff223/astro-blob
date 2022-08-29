@@ -3,6 +3,8 @@ layout: ../../layouts/BlogLayout.astro
 author: "Nicholas Voelker"
 date: "24 Aug 2022"
 title: "Post1"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+url: /posts/post1
 ---
 
 # Post 1
