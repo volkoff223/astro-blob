@@ -3,30 +3,37 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 ---
 
-<Layout title="Welcome to theLog." current="">
+<Layout title="Nicholas Voelker" current="">
 	<main>
-		<h1>Welcome to <span class="text-gradient">theLog</span></h1>
-		<p class="instructions">Check out the latest blog post!</p>
+		<h1>
+			Check out some of
+			<span class="text-gradient">MY WORK</span>
+		</h1>
+		<p class="instructions">
+			I am a front end developer that leverages the latest web
+			technologies to build your dream site.
+		</p>
+
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="#"
-				title="My First Post"
-				body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				href="https://codepen.io/volkoff223/pen/BvvwdY"
+				title="Roman Numeral Converter"
+				body="A simple Roman Numeral converter."
 			/>
 			<Card
-				href="#"
-				title="The Terminal"
-				body="non blandit massa enim nec."
+				href="https://www.freecodecamp.org/volkoff223"
+				title="Free Code Camp Profile"
+				body="Check out my FCC profile."
 			/>
 			<Card
-				href="#"
-				title="Using VIM"
-				body="massa eget egestas purus viverra accumsan in."
+				href="https://codepen.io/volkoff223/pen/wjZeGo"
+				title="Random Wikipedia Page"
+				body="Display a random Wikipedia page."
 			/>
 			<Card
-				href="#"
-				title="Learning"
-				body="in fermentum et sollicitudin ac orci"
+				href="https://github.com/volkoff223"
+				title="My Github"
+				body="A link to my Github"
 			/>
 		</ul>
 	</main>

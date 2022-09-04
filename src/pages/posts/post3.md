@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogLayout.astro
 author: "Nicholas Voelker"
 date: "24 Aug 2022"
-title: post3
+title: Post 3
 description: "Praesent elementum facilisis leo vel fringilla est ullamcorper. Turpis cursus in hac habitasse platea dictumst quisque."
 url: /posts/post3
 ---

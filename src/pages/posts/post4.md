@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogLayout.astro
 author: "Nicholas Voelker"
 date: "24 Aug 2022"
-title: post4
+title: Post 4
 description: "Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Diam donec adipiscing tristique risus. Commodo elit at imperdiet dui accumsan sit amet."
 url: /posts/post4
 ---

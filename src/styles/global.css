@@ -7,7 +7,7 @@
   --color-bg: hsl(10, 21%, 95%);
   --color-border: hsl(17, 24%, 90%);
 
-  --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+  --astro-gradient: linear-gradient(#075dce, #00af66);
 }
 
 html {
@@ -35,6 +35,7 @@ main {
   font-weight: 900;
   background-image: var(--astro-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 100% 200%;
   background-position-y: 100%;
@@ -50,17 +51,4 @@ main {
   50% {
     background-position-y: 80%;
   }
-}
-
-:global(h1) {
-  font-size: var(--font-size-xl);
-}
-
-:global(h2) {
-  font-size: var(--font-size-lg);
-}
-
-:global(code) {
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
 }
