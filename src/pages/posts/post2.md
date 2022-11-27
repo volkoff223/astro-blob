@@ -2,12 +2,19 @@
 layout: ../../layouts/BlogLayout.astro
 author: "Nicholas Voelker"
 date: "24 Aug 2022"
-title: Post 2
-description: "Integer vitae justo eget magna fermentum iaculis eu. Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Diam maecenas sed enim ut."
+title: Roman Numeral Converter
+description: "Converts numbers to roman numerals using pure Javascript"
 url: /posts/post2
 ---
 
-# Post 2
+# Roman Numeral Converter
+
+<p class="codepen" data-height="500" data-default-tab="result" data-slug-hash="BvvwdY" data-user="volkoff223" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/volkoff223/pen/BvvwdY">
+  Roman Numeral Converter</a> by Nick (<a href="https://codepen.io/volkoff223">@volkoff223</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor id aliquet lectus proin nibh nisl condimentum id. Tristique senectus et netus et malesuada fames ac. Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse. In iaculis nunc sed augue. Elit ullamcorper dignissim cras tincidunt. Nunc non blandit massa enim nec dui nunc mattis. Viverra orci sagittis eu volutpat. Nullam non nisi est sit amet facilisis. Volutpat odio facilisis mauris sit amet massa. Elit pellentesque habitant morbi tristique senectus et. Id porta nibh venenatis cras sed felis. Ante in nibh mauris cursus mattis. Maecenas pharetra convallis posuere morbi leo. Id porta nibh venenatis cras sed felis eget velit aliquet. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat. Egestas purus viverra accumsan in nisl nisi. Orci a scelerisque purus semper eget duis. Scelerisque varius morbi enim nunc faucibus a. Aenean pharetra magna ac placerat vestibulum.
 

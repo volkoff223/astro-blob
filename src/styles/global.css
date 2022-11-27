@@ -4,14 +4,14 @@
   --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
 
   --color-text: hsl(12, 5%, 4%);
-  --color-bg: hsl(10, 21%, 95%);
+  --color-bg: hsl(0, 0%, 79%);
   --color-border: hsl(17, 24%, 90%);
 
-  --astro-gradient: linear-gradient(#075dce, #00af66);
+  --gradient: linear-gradient(#075dce, #00af66);
 }
 
 html {
-  font-family: system-ui, sans-serif;
+  font-family: "Roboto", sans-serif, system-ui;
   font-size: var(--font-size-base);
   color: var(--color-text);
   background-color: var(--color-bg);
@@ -23,6 +23,7 @@ body {
 
 h1 {
   margin: 2rem 0;
+  text-align: center;
 }
 
 main {
@@ -31,9 +32,14 @@ main {
   max-width: 60ch;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .text-gradient {
   font-weight: 900;
-  background-image: var(--astro-gradient);
+  background-image: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

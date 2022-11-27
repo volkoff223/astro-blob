@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Nicholas Voelker" current="work">
+  <main>
+    <h1>
+      Check out some of
+      <span class="text-gradient">MY WORK</span>
+    </h1>
+    <p class="instructions">
+      I am a front end developer that leverages the latest web technologies to
+      build your dream site.
+    </p>
+
+    <ul role="list" class="link-card-grid">
+      <Card
+        imgSrc="/romanNum.png"
+        imgHeight="100px"
+        href="/posts/post2"
+        title="Roman Numeral Converter"
+        body="A simple Roman Numeral converter."
+      />
+      <Card
+        imgSrc="/fcc_secondary_small.png"
+        imgHeight="100px"
+        href="https://www.freecodecamp.org/volkoff223"
+        title="Free Code Camp Profile"
+        body="Check out my FCC profile."
+      />
+      <Card
+        imgSrc="wiki.png"
+        imgHeight="100px"
+        href="/posts/post1"
+        title="Random Wikipedia Page"
+        body="Display a random Wikipedia page."
+      />
+      <Card
+        imgSrc="/github.png"
+        imgHeight="170px"
+        href="https://github.com/volkoff223"
+        title="My Github"
+        body="A link to my Github"
+      />
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    background: #4f39fa;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    color: var(--color-bg);
+  }
+
+  .instructions code {
+    font-size: 0.875em;
+    border: 0.1em solid var(--color-border);
+    border-radius: 4px;
+    padding: 0.15em 0.25em;
+  }
+
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
+</style>

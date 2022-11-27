@@ -1,15 +1,16 @@
 ---
 import Nav from "../components/Nav.astro";
+import Head from "../components/Head.astro";
 import "../styles/global.css";
 const { frontmatter } = Astro.props;
 ---
 
 <title>{frontmatter.title}</title>
-
+<Head />
 <body>
-    <Nav current="blog" />
-    <main>
-        <slot />
-        <p>Written on: {frontmatter.date} by {frontmatter.author}</p>
-    </main>
+  <Nav current="blog" />
+  <main>
+    <slot />
+    <p>Written on: {frontmatter.date} by {frontmatter.author}</p>
+  </main>
 </body>

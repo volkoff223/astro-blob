@@ -1,13 +1,20 @@
 ---
 layout: ../../layouts/BlogLayout.astro
 author: "Nicholas Voelker"
-date: "24 Aug 2022"
-title: "Post 1"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+date: "16 Nov 2022"
+title: "Wiki Mind Reader"
+description: "A simple project that picks a random Wikipedia page or you can search for a term."
 url: /posts/post1
 ---
 
-# Post 1
+# Wiki Mind Reader
+
+<p class="codepen" data-height="400" data-default-tab="result" data-slug-hash="wjZeGo" data-user="volkoff223" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/volkoff223/pen/wjZeGo">
+  Wiki Mind Reader</a> by Nick (<a href="https://codepen.io/volkoff223">@volkoff223</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id. Facilisis leo vel fringilla est. Pellentesque dignissim enim sit amet venenatis urna cursus. Tellus integer feugiat scelerisque varius morbi enim. Habitant morbi tristique senectus et netus. Tristique senectus et netus et malesuada fames ac turpis egestas. Id nibh tortor id aliquet lectus proin nibh. Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Elementum facilisis leo vel fringilla est ullamcorper eget. Placerat duis ultricies lacus sed turpis. Scelerisque fermentum dui faucibus in ornare quam viverra orci.
 
