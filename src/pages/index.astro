@@ -1,12 +1,8 @@
 ---
 import Layout from "../layouts/HeroLayout.astro";
+import RotatingText from "../components/RotatingText.astro";
 ---
 
-<script>
-  import { rotatingText } from "../scripts/rotatingText";
-
-  rotatingText();
-</script>
 <Layout title="Nicholas Voelker" current="">
   <div class="container">
     <div class="hero">
@@ -15,10 +11,7 @@ import Layout from "../layouts/HeroLayout.astro";
         <span class="text-gradient">Nick</span>
       </h1>
     </div>
-    <div class="rotatingText">
-      <p>Nachos are</p>
-      <div id="word"></div>
-    </div>
+    <RotatingText />
     <div class="intro">
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum
@@ -92,10 +85,6 @@ import Layout from "../layouts/HeroLayout.astro";
 
   .intro {
     grid-area: intro;
-  }
-
-  .rotatingText {
-    grid-area: img;
   }
 
   .nav {

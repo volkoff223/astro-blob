@@ -13,33 +13,19 @@ export function rotatingText() {
       oldWordArr.push(oldWord.charAt(i));
     }
   }
-
-  // function wordChange(newWordArr, oldWordArr) {
-  //   let numOfRotations = 0;
-  //   newWordArr.length > oldWordArr.length
-  //     ? (numOfRotations = newWordArr.length)
-  //     : (numOfRotations = oldWordArr.length);
-  //   for (let i = 0; i < numOfRotations; i++) {
-  //     if (newWordArr[i] != undefined) {
-  //       let newLetter = document.createElement("span");
-  //       newLetter.setAttribute("id", "letter" + [i]);
-  //       newLetter.innerText = newWordArr[i];
-  //       document.getElementById("word").appendChild(newLetter);
-  //     }
-  //   }
-  // }
+  split(newWord, oldWord);
 
   let n = 0;
   let speed = 500;
   function typeWriter() {
-    if (n > newWordArr.length) {
+    if (n < newWordArr.length) {
       if (newWordArr[n] != undefined) {
         let newLetter = document.createElement("span");
-        newLetter.setAttribute("id", "letter" + [n]);
+        newLetter.setAttribute("id", "letter");
         newLetter.innerText = newWordArr[n];
         document.getElementById("word").appendChild(newLetter);
       }
-      i++;
+      n++;
       setTimeout(typeWriter, speed);
     }
   }
@@ -49,7 +35,4 @@ export function rotatingText() {
       let oldLetter = document.getElementById("letter" + [i]);
     }
   }
-
-  split(oldWord, newWord);
-  // wordChange(newWordArr, oldWordArr);
 }
