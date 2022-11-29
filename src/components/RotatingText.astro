@@ -2,6 +2,7 @@
 ---
 
 <script>
+  // Function to make new word visible
   let newWord = (i: number) => {
     let word = document.getElementById("word" + i);
     if (word != undefined) {
@@ -9,14 +10,20 @@
       console.log(i);
     }
   };
+
+  // Function to make old word invisible
   let oldWord = (i: number) => {
     let word = document.getElementById("word" + i);
     if (word != undefined) {
       word.style.display = "none";
     }
   };
+
+  // Set currentNumber and previousNumber
   let currentNumber: number = 0;
   let previousNumber: number = 0;
+
+  // Function to count up to 5 on both the currentNumber and previousNumber. This function also calls the newWord and oldWord function.
   let count = () => {
     if (currentNumber < 1) {
       previousNumber = 5;
@@ -35,6 +42,8 @@
       console.log(previousNumber);
     }
   };
+
+  // Call the count function every 4 sec
   setInterval(count, 4000);
 </script>
 
