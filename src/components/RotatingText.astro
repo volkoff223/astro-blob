@@ -1,22 +1,54 @@
 ---
 ---
 
-<script></script>
+<script>
+  let newWord = (i: number) => {
+    let word = document.getElementById("word" + i);
+    if (word != undefined) {
+      word.style.display = "block";
+      console.log(i);
+    }
+  };
+  let oldWord = (i: number) => {
+    let word = document.getElementById("word" + i);
+    if (word != undefined) {
+      word.style.display = "none";
+    }
+  };
+  let currentNumber: number = 0;
+  let previousNumber: number = 0;
+  let count = () => {
+    if (currentNumber < 1) {
+      previousNumber = 5;
+    } else {
+      previousNumber = currentNumber;
+    }
+    if (currentNumber < 5) {
+      currentNumber++;
+      newWord(currentNumber);
+      oldWord(previousNumber);
+      console.log(previousNumber);
+    } else {
+      currentNumber = 1;
+      newWord(currentNumber);
+      oldWord(previousNumber);
+      console.log(previousNumber);
+    }
+  };
+  setInterval(count, 4000);
+</script>
 
 <div class="container">
   <p>Softwear development is</p>
-  <span class="word" id="letter1">exciting</span>
-  <span class="word" id="letter2">demanding</span>
-  <span class="word" id="letter3">fun</span>
-  <span class="word" id="letter4">hard</span>
-  <span class="word" id="letter5">tough</span>
+  <span class="word" id="word1">exciting</span>
+  <span class="word" id="word2">demanding</span>
+  <span class="word" id="word3">fun</span>
+  <span class="word" id="word4">hard</span>
+  <span class="word" id="word5">tough</span>
 </div>
 
 <style>
   .word {
     display: none;
-  }
-  #letter2 {
-    display: block;
   }
 </style>
