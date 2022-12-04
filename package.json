@@ -14,5 +14,8 @@
     "@types/jquery": "^3.5.14",
     "astro": "^1.0.7",
     "svelte": "^3.53.1"
+  },
+  "dependencies": {
+    "typescript": "^4.9.3"
   }
 }
