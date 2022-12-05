@@ -7,7 +7,6 @@
     let word = document.getElementById("word" + i);
     if (word != undefined) {
       word.style.display = "block";
-      console.log(i);
     }
   };
 
@@ -35,12 +34,10 @@
       currentNumber++;
       newWord(currentNumber);
       oldWord(previousNumber);
-      console.log(previousNumber);
     } else {
       currentNumber = 1;
       newWord(currentNumber);
       oldWord(previousNumber);
-      console.log(previousNumber);
     }
   };
 
