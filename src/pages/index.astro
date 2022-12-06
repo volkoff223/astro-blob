@@ -6,30 +6,21 @@ import ShakingButtons from "../components/ShakingButtons.astro";
 
 <Layout title="Nicholas Voelker" current="">
   <div class="container">
-    <div class="hero">
-      <h1>
-        Hello, my name is
-        <span class="text-gradient">Nick</span>
-      </h1>
-    </div>
-    <div class="img">
-      <RotatingText />
-    </div>
-    <div class="intro">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum
-        omnis assumenda harum tempora dignissimos!
-      </p>
-    </div>
-    <div class="nav">
-      <ShakingButtons />
-    </div>
+    <p>Hi, my name is</p>
+    <h1>
+      <span class="text-gradient">Nick</span>
+    </h1>
+    <RotatingText />
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum
+      omnis assumenda harum tempora dignissimos!
+    </p>
+
+    <ShakingButtons />
   </div>
 </Layout>
 
 <style>
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
-
   *,
   :before,
   :after {
@@ -38,64 +29,11 @@ import ShakingButtons from "../components/ShakingButtons.astro";
     padding: 0;
   }
 
-  html {
-    min-height: 100vh;
-  }
-
   body {
-    /* overflow: hidden; */
     min-height: 100vh;
   }
 
   .container {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40% 60%;
-    grid-template-areas:
-      "hero intro"
-      "img nav";
-    justify-items: center;
-    align-items: center;
-  }
-
-  @media only screen and (max-width: 768px) {
-    body {
-      overflow: visible;
-    }
-    .container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 150px 150px 200px 300px;
-      grid-template-areas:
-        "hero"
-        "intro"
-        "img"
-        "nav";
-    }
-  }
-
-  .hero {
-    grid-area: hero;
-  }
-
-  .intro {
-    grid-area: intro;
-  }
-
-  .nav {
-    grid-area: nav;
-    align-self: start;
-  }
-
-  h1 {
-    font-family: "Permanent Marker", cursive;
-    font-size: var(--font-size-xl);
-    transform: rotate(-15deg);
-  }
-
-  p {
-    font-size: var(--font-size-lg);
-    font-weight: 700;
-    text-align: center;
+    padding: 2rem 10rem;
   }
 </style>

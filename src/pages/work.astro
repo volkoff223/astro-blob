@@ -1,18 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import ContentHeader from "../components/ContentHeader.astro";
 ---
 
-<Layout title="Nicholas Voelker" current="work">
+<Layout title="My Work" current="work">
   <main>
     <h1>
       Check out some of
       <span class="text-gradient">MY WORK</span>
     </h1>
-    <p class="instructions">
-      I am a front end developer that leverages the latest web technologies to
-      build your dream site.
-    </p>
+    <ContentHeader
+      content="Here are some links to projects I have built and also some articles on how I built them."
+    />
 
     <ul role="list" class="link-card-grid">
       <Card
@@ -69,22 +69,6 @@ import Card from "../components/Card.astro";
 </Layout>
 
 <style>
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    background: #4f39fa;
-    padding: 1rem;
-    border-radius: 0.4rem;
-    color: var(--color-bg);
-  }
-
-  .instructions code {
-    font-size: 0.875em;
-    border: 0.1em solid var(--color-border);
-    border-radius: 4px;
-    padding: 0.15em 0.25em;
-  }
-
   .link-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));

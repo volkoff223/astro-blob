@@ -8,8 +8,10 @@ const { current = "" } = Astro.props;
   </a>
   <nav>
     <a class={current === "work" ? "selected" : ""} href="/work">my work</a>
-    <a class={current === "about" ? "selected" : ""} href="/about">about me</a>
-    <a class={current === "posts" ? "selected" : ""} href="/posts">posts</a>
+    <a class={current === "resume" ? "selected" : ""} href="/resume">resume</a>
+    <a class={current === "articles" ? "selected" : ""} href="/articles"
+      >articles</a
+    >
   </nav>
 </div>
 
