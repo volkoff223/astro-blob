@@ -2,12 +2,23 @@
 const { current = "" } = Astro.props;
 ---
 
+<script>
+  // TODO: Need to remove the shake css class after animation is done.
+  function handleHover() {
+    document.getElementById("buttonContainer")!.classList.add("shake");
+  }
+
+  document
+    .getElementById("buttonContainer")!
+    .addEventListener("mouseover", handleHover);
+</script>
+
 <div id="nav-container">
   <a href="/" class="icon selected">
     <img src="../../logo.png" alt="" id="icon-img" />
   </a>
   <nav>
-    <div class="buttonContainer">
+    <div id="buttonContainer">
       <a class={current === "work" ? "selected" : ""} href="/work">my work</a>
     </div>
     <div class="buttonContainer">
@@ -58,12 +69,8 @@ const { current = "" } = Astro.props;
     opacity: 0.7;
     font-weight: 400;
   }
-  /* .buttonContainer {
-    text-align: center;
-    margin-top: 20px;
-  } */
 
-  .buttonContainer:hover a {
+  .shake {
     animation: 1.5s ease-in-out text-shadow;
   }
 
