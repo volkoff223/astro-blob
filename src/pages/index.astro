@@ -11,10 +11,12 @@ import ShakingButtons from "../components/ShakingButtons.astro";
       <span class="text-gradient">Nick</span>
     </h1>
     <RotatingText />
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum
-      omnis assumenda harum tempora dignissimos!
-    </p>
+    <div>
+      <p class="subtle">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum
+        omnis assumenda harum tempora dignissimos!
+      </p>
+    </div>
 
     <ShakingButtons />
   </div>
@@ -35,5 +37,9 @@ import ShakingButtons from "../components/ShakingButtons.astro";
 
   .container {
     padding: 2rem 10rem;
+  }
+
+  .subtle {
+    opacity: 0.55;
   }
 </style>

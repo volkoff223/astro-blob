@@ -2,76 +2,83 @@
 ---
 
 <script>
-  // Function to make new word visible
+  let i: number = 0;
+  let currentNum: number = 0;
 
-  // This function need to be worked on to make each letter appear individualy.
-  // Words appear all at once.
-  let newWord = (i: number) => {
-    let word = document.getElementById("word" + i);
-    if (word != undefined) {
-      for (let i = 0; i < word.innerHTML.length; i++) {
-        setInterval(addLetter, 500);
-        function addLetter() {
-          if (word != undefined) {
-            let wordContainer = document.getElementById("wordDisplay");
-            const el = document.createElement("span");
-            el.textContent = word.innerHTML[i];
-            el.setAttribute("id", "letter " + i);
-
-            // wordContainer?.appendChild(el);
-          }
-        }
-      }
-    }
-  };
-
-  // Function to make old word invisible
-  let oldWord = (i: number) => {
-    let word = document.getElementById("word" + i);
-    if (word != undefined) {
-      word.style.display = "none";
-    }
-  };
-
-  // Set currentNumber and previousNumber
-  let currentNumber: number = 0;
-  let previousNumber: number = 0;
-
-  // Function to count up to 5 on both the currentNumber and previousNumber.
-  // This function also calls the newWord and oldWord function.
-  let count = () => {
-    if (currentNumber < 1) {
-      previousNumber = 5;
+  let count = function () {
+    let word = document.getElementById("words");
+    if (i < 4) {
+      word?.children[i].classList.add("rotating");
+      i++;
     } else {
-      previousNumber = currentNumber;
-    }
-    if (currentNumber < 5) {
-      currentNumber++;
-      newWord(currentNumber);
-      oldWord(previousNumber);
-    } else {
-      currentNumber = 1;
-      newWord(currentNumber);
-      oldWord(previousNumber);
+      word?.children[i].classList.add("lastRotation");
+      word?.children[i].classList.add("visible");
     }
   };
+
+  setInterval(count, 2000);
 
   // Call the count function every 2 sec
-  setInterval(count, 2000);
 </script>
 
 <div class="container">
-  <p>Softwear development is</p>
-  <span id="wordDisplay"></span>
-  <span class="word" id="word1">exciting</span>
-  <span class="word" id="word2">demanding</span>
-  <span class="word" id="word3">fun</span>
-  <span class="word" id="word4">hard</span>
-  <span class="word" id="word5">tough</span>
+  <p class="lastRotation">Softwear development is</p>
+  <div id="words">
+    <span>exciting</span>
+    <span>demanding</span>
+    <span>fun</span>
+    <span>hard</span>
+    <span>tough</span>
+  </div>
 </div>
 
 <style>
-  .word {
-    display: none;
+  span {
+    opacity: 0;
+    position: absolute;
+  }
+
+  #words {
+    margin-bottom: 50px;
+  }
+
+  .visible {
+    opacity: 1;
+  }
+
+  .rotating {
+    animation: rotate 2.1s;
+  }
+
+  .lastRotation {
+    animation: lastRotate 1.5s;
+  }
+
+  @keyframes rotate {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 50px, 0);
+    }
+    20%,
+    80% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(0, -25, 0);
+    }
+  }
+
+  @keyframes lastRotate {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 50px, 0);
+    }
+    20%,
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 </style>
