@@ -7,11 +7,18 @@ const { current = "" } = Astro.props;
     <img src="../../logo.png" alt="" id="icon-img" />
   </a>
   <nav>
-    <a class={current === "work" ? "selected" : ""} href="/work">my work</a>
-    <a class={current === "resume" ? "selected" : ""} href="/resume">resume</a>
-    <a class={current === "articles" ? "selected" : ""} href="/articles"
-      >articles</a
-    >
+    <div class="buttonContainer">
+      <a class={current === "work" ? "selected" : ""} href="/work">my work</a>
+    </div>
+    <div class="buttonContainer">
+      <a class={current === "resume" ? "selected" : ""} href="/resume">resume</a
+      >
+    </div>
+    <div class="buttonContainer">
+      <a class={current === "articles" ? "selected" : ""} href="/articles"
+        >articles</a
+      >
+    </div>
   </nav>
 </div>
 
@@ -50,5 +57,50 @@ const { current = "" } = Astro.props;
   a:not(.selected) {
     opacity: 0.7;
     font-weight: 400;
+  }
+  /* .buttonContainer {
+    text-align: center;
+    margin-top: 20px;
+  } */
+
+  .buttonContainer:hover a {
+    animation: 1.5s ease-in-out text-shadow;
+  }
+
+  @keyframes text-shadow {
+    0% {
+      transform: translateY(0);
+      text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+    }
+
+    20% {
+      transform: translateY(-0.5em);
+      text-shadow: 0 0.125em 0 #0c2ffb, 0 0.25em 0 #2cfcfd, 0 -0.125em 0 #fb203b,
+        0 -0.25em 0 #fefc4b;
+    }
+
+    40% {
+      transform: translateY(0.25em);
+      text-shadow: 0 -0.0625em 0 #0c2ffb, 0 -0.125em 0 #2cfcfd,
+        0 0.0625em 0 #fb203b, 0 0.125em 0 #fefc4b;
+    }
+
+    60% {
+      transform: translateY(-0.125em);
+      text-shadow: 0 0.03125em 0 #0c2ffb, 0 0.0625em 0 #2cfcfd,
+        0 -0.03125em 0 #fb203b, 0 -0.0625em 0 #fefc4b;
+    }
+
+    80% {
+      transform: translateY(0);
+      text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
   }
 </style>
