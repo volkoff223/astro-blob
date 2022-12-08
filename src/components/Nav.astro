@@ -3,14 +3,20 @@ const { current = "" } = Astro.props;
 ---
 
 <script>
-  // TODO: Need to remove the shake css class after animation is done.
-  function handleHover() {
-    document.getElementById("buttonContainer")!.classList.add("shake");
-  }
+  // TODO: buggy when you mouseover multiple times quickly
 
-  document
-    .getElementById("buttonContainer")!
-    .addEventListener("mouseover", handleHover);
+  document.querySelectorAll(".buttonContainer").forEach((el) => {
+    let timeOutID;
+    function removeShakeClass() {
+      el.classList.remove("shake");
+    }
+    el.addEventListener("mouseover", () => {
+      el.classList.add("shake");
+      timeOutID = setTimeout(removeShakeClass, 5000);
+      clearTimeout(timeOutID);
+      console.log(timeOutID);
+    });
+  });
 </script>
 
 <div id="nav-container">
@@ -18,7 +24,7 @@ const { current = "" } = Astro.props;
     <img src="../../logo.png" alt="" id="icon-img" />
   </a>
   <nav>
-    <div id="buttonContainer">
+    <div class="buttonContainer">
       <a class={current === "work" ? "selected" : ""} href="/work">my work</a>
     </div>
     <div class="buttonContainer">
@@ -71,7 +77,7 @@ const { current = "" } = Astro.props;
   }
 
   .shake {
-    animation: 1.5s ease-in-out text-shadow;
+    animation: 5s ease-in-out text-shadow;
   }
 
   @keyframes text-shadow {
