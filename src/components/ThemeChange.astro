@@ -6,6 +6,7 @@
 
   // Get the current theme from local storage
   const currentTheme = localStorage.getItem("theme");
+  let backgroundImg = document.getElementById("backgroundImg");
 
   // If the current local storage item can be found
   if (currentTheme) {
@@ -15,6 +16,8 @@
     // If the current theme is dark, check the theme toggle
     if (currentTheme === "dark") {
       themeToggle!.checked = true;
+    } else if (currentTheme === "light") {
+      backgroundImg!.style.filter = "invert(0.82)";
     }
   }
 
@@ -22,9 +25,13 @@
   function switchTheme(e: any) {
     if (e.target.checked) {
       document.documentElement.setAttribute("data-theme", "dark");
+      backgroundImg!.style.filter = "invert(0)";
       localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.setAttribute("data-theme", "light");
+      let backgroundImg = document.getElementById("backgroundImg");
+      backgroundImg!.style.filter = "invert(0.82)";
+
       localStorage.setItem("theme", "light");
     }
   }
@@ -32,6 +39,10 @@
   // Add an event listener to the theme toggle, which will switch the theme
   themeToggle!.addEventListener("change", switchTheme, false);
 </script>
+
+<div class="imgContainer">
+  <img id="backgroundImg" class="backgroundImg" src="BoneShark.png" />
+</div>
 
 <div class="theme-switch-wrapper">
   <label class="theme-switch" for="checkbox">
@@ -78,6 +89,22 @@
 </div>
 
 <style>
+  .imgContainer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    z-index: -1;
+    opacity: 0.3;
+  }
+
+  .backgroundImg {
+    margin-top: -100px;
+    padding-left: 100px;
+    min-width: 60vh;
+  }
+
   /* TOGGLE  */
   .theme-switch-wrapper {
     display: flex;

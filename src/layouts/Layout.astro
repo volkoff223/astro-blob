@@ -10,6 +10,8 @@ export interface Props {
 const { current, title } = Astro.props as Props;
 ---
 
+<script></script>
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
@@ -18,5 +20,8 @@ const { current, title } = Astro.props as Props;
 
 <body>
   <Nav current={current} />
+
   <slot />
 </body>
+
+<style></style>
