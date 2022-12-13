@@ -6,7 +6,6 @@
 
   // Get the current theme from local storage
   const currentTheme = localStorage.getItem("theme");
-  let backgroundImg = document.getElementById("backgroundImg");
 
   // If the current local storage item can be found
   if (currentTheme) {
@@ -17,7 +16,6 @@
     if (currentTheme === "dark") {
       themeToggle!.checked = true;
     } else if (currentTheme === "light") {
-      backgroundImg!.style.filter = "invert(0.82)";
     }
   }
 
@@ -89,6 +87,7 @@
 <style>
   /* TODO: Download imagetools from 'https://astro-imagetools-docs.vercel.app/en/components-and-apis' */
   /* TODO: Use <Backgroundimage /> to set background image */
+  /* Background-image works on 'run dev', but does not work on 'run preview'. Astro imagetools is probably going to fix this. */
   body {
     background-image: url("BG-Logo.svg");
     background-repeat: no-repeat;
