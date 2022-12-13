@@ -25,12 +25,10 @@
   function switchTheme(e: any) {
     if (e.target.checked) {
       document.documentElement.setAttribute("data-theme", "dark");
-      backgroundImg!.style.filter = "invert(0)";
       localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.setAttribute("data-theme", "light");
       let backgroundImg = document.getElementById("backgroundImg");
-      backgroundImg!.style.filter = "invert(0.82)";
 
       localStorage.setItem("theme", "light");
     }
@@ -41,7 +39,7 @@
 </script>
 
 <div class="imgContainer">
-  <img id="backgroundImg" class="backgroundImg" src="BG-Logo.svg" />
+  <!-- <img id="backgroundImg" class="backgroundImg" src="BG-Logo.svg" /> -->
 </div>
 
 <div class="theme-switch-wrapper">
@@ -89,6 +87,14 @@
 </div>
 
 <style>
+  /* TODO: Download imagetools from 'https://astro-imagetools-docs.vercel.app/en/components-and-apis' */
+  /* TODO: Use <Backgroundimage /> to set background image */
+  body {
+    background-image: url("BG-Logo.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
   .imgContainer {
     position: absolute;
     width: 100vw;
