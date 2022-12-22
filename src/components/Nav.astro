@@ -17,7 +17,7 @@ const { current = "" } = Astro.props;
 </script>
 
 <div id="nav-container">
-  <a href="/" class="nav-logo selected"> BONE SHARK WEB SOLUTIONS</a>
+  <a href="/" class="nav-logo selected"><img src="BSNavLogo.png" /></a>
   <nav>
     <div class="buttonContainer">
       <a class={current === "work" ? "selected" : ""} href="/work">my work</a>
@@ -39,29 +39,27 @@ const { current = "" } = Astro.props;
   nav {
     align-items: center;
     display: flex;
-    font-family: var(--font-family-sans);
     font-weight: 700;
     justify-content: flex-end;
     text-transform: uppercase;
   }
 
   nav a {
-    display: block;
-    position: relative;
     margin-right: 20px;
     min-width: 70px;
   }
 
-  .nav-logo {
-    padding-left: 50px;
+  .nav-logo > img {
+    padding: 15px 20px;
+  }
+
+  .buttonContainer > a {
+    padding: 20px 0px;
   }
 
   #nav-container {
     display: flex;
-    background-color: var(--bg-color);
     justify-content: space-between;
-    padding: 10px 0;
-    align-items: center;
   }
 
   #icon-img {
