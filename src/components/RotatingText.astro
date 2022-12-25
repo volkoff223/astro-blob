@@ -13,21 +13,20 @@
       word?.children[i].classList.add("lastRotation");
       word?.children[i].classList.add("visible");
     }
+    setInterval(count, 3000);
   };
-
-  setInterval(count, 2000);
-
-  // Call the count function every 2 sec
+  count();
+  // Call the count function every 3 sec
 </script>
 
 <div class="container">
-  <p class="lastRotation">Welcome to</p>
   <div id="words">
-    <span>a combat veteran owned small business</span>
-    <span>the start of something fresh</span>
-    <span>graphic design built to impress</span>
-    <span>web development driven by you</span>
-    <span>Bone Shark. A web solutions company.</span>
+    <span>A combat veteran owned small business.</span>
+    <span>A user experience built to impress.</span>
+    <!-- Dont remove this span. Its a hack. -->
+    <span></span>
+    <span>Web development driven by you.</span>
+    <span>A web solutions company.</span>
   </div>
 </div>
 
@@ -47,11 +46,11 @@
   }
 
   .rotating {
-    animation: rotate 2.1s;
+    animation: rotate 3s;
   }
 
   .lastRotation {
-    animation: lastRotate 1.5s;
+    animation: lastRotate 3s;
   }
 
   @keyframes rotate {

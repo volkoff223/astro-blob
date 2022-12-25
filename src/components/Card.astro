@@ -7,8 +7,10 @@ export interface Props {
   imgHeight?: string;
 }
 
-const { href, title, body, imgSrc, imgHeight } = Astro.props as Props;
+const { href, title, body } = Astro.props as Props;
 ---
+
+<script></script>
 
 <>
   <li class="link-card">
@@ -20,7 +22,6 @@ const { href, title, body, imgSrc, imgHeight } = Astro.props as Props;
       <p>
         {body}
       </p>
-      <img src={imgSrc} height={imgHeight} />
     </a>
   </li>
 </>
@@ -35,6 +36,7 @@ const { href, title, body, imgSrc, imgHeight } = Astro.props as Props;
   }
 
   .link-card {
+    color: black;
     list-style: none;
     display: flex;
     padding: 0.7rem;
@@ -51,8 +53,6 @@ const { href, title, body, imgSrc, imgHeight } = Astro.props as Props;
     line-height: 1.4;
     padding: 1em 1.3em;
     border-radius: 0.35rem;
-    color: var(--text-color);
-    background-color: rgb(255, 255, 255);
     opacity: 0.8;
   }
 
