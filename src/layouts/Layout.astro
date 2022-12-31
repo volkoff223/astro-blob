@@ -1,6 +1,7 @@
 ---
 import Nav from "../components/Nav.astro";
 import Head from "../components/Head.astro";
+import MobileNav from "../components/MobileNav.astro";
 import "../styles/global.css";
 export interface Props {
   title: string;
@@ -10,7 +11,14 @@ export interface Props {
 const { current, title } = Astro.props as Props;
 ---
 
-<script></script>
+<script>
+  let bigNav: any = document.getElementById("bigNav");
+  let mobileNav: any = document.getElementById("mobileNav");
+  if (window.screen.width < 720) {
+    bigNav.style.display = "none";
+    mobileNav.style.display = "block";
+  }
+</script>
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
@@ -20,9 +28,18 @@ const { current, title } = Astro.props as Props;
 <title>{title}</title>
 
 <body>
-  <Nav current={current} />
+  <div id="bigNav">
+    <Nav current={current} />
+  </div>
+  <div id="mobileNav">
+    <MobileNav current={current} />
+  </div>
 
   <slot />
 </body>
 
-<style></style>
+<style>
+  #mobileNav {
+    display: none;
+  }
+</style>

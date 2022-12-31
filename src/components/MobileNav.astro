@@ -1,0 +1,146 @@
+---
+import ThemeChange from "./ThemeChange.astro";
+const { current = "" } = Astro.props;
+---
+
+<script></script>
+<div class="menuToggleContainer">
+  <a href="/" class="nav-logo selected"><img src="BSNavLogo.png" /></a>
+  <div id="menuToggle">
+    <input id="toggleCheckbox" type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="navMenu" class="navMenu">
+      <a class={current === "work" ? "selected" : ""} href="/work"
+        ><li>my work</li>
+      </a>
+      <a class={current === "resume" ? "selected" : ""} href="/resume"
+        ><li>resume</li>
+      </a>
+      <a class={current === "articles" ? "selected" : ""} href="/articles"
+        ><li>articles</li>
+      </a>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .menuToggleContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+  }
+  #menuToggle {
+    padding: 20px;
+    display: inline;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #ffffff;
+
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+
+    cursor: pointer;
+
+    opacity: 0;
+    z-index: 2;
+  }
+
+  #menuToggle span {
+    display: block;
+    width: 50px;
+    height: 5px;
+    margin-bottom: 8px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menuToggle span:nth-child(1) {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-child(3) {
+    transform-origin: 0% 100%;
+  }
+
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(1px, -10px);
+    background: #232323;
+  }
+
+  #menuToggle input:checked ~ span:nth-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  #menuToggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-5px, 15px);
+  }
+
+  .nav-logo > img {
+    padding: 15px 20px;
+  }
+
+  a {
+    background-color: transparent;
+    text-transform: uppercase;
+  }
+
+  .navMenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    transition: 1s all ease-in-out;
+    font-size: 100px;
+    font-weight: 700;
+    top: 0;
+    opacity: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  #menuToggle input:checked ~ ul {
+    opacity: 0.9;
+    transform: translate(100vw);
+    background-color: transparent;
+  }
+</style>
