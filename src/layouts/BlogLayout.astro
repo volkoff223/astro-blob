@@ -1,5 +1,5 @@
 ---
-import Nav from "../components/Nav.astro";
+import MobileNav from "../components/MobileNav.astro";
 import Head from "../components/Head.astro";
 import "../styles/global.css";
 const { frontmatter } = Astro.props;
@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
 <title>{frontmatter.title}</title>
 <Head />
 <body>
-  <Nav current="blog" />
+  <MobileNav current="articles" />
   <main>
     <slot />
     <p>Written on: {frontmatter.date} by {frontmatter.author}</p>
