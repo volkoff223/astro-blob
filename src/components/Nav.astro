@@ -18,24 +18,50 @@ const { current = "" } = Astro.props;
 
 <div id="nav-container">
   <a href="/" class="nav-logo selected"><img src="/BSNavLogo.png" /></a>
+
   <nav>
     <div class="buttonContainer">
-      <a class={current === "work" ? "selected" : ""} href="/work">my work</a>
+      <a class={current === "work" ? "selected" : ""} href="/work">work</a>
     </div>
     <div class="buttonContainer">
-      <a class={current === "resume" ? "selected" : ""} href="/resume">resume</a
-      >
+      <a class={current === "resume" ? "selected" : ""} href="/resume">about</a>
     </div>
     <div class="buttonContainer">
       <a class={current === "articles" ? "selected" : ""} href="/articles"
         >articles</a
       >
     </div>
+    <div class="buttonContainer">
+      <a class={current === "contact" ? "selected" : ""} href="/contact"
+        >contact</a
+      >
+    </div>
     <ThemeChange />
+    <div class="icons">
+      <a href="https://www.freecodecamp.org/volkoff223">
+        <i class="fa fa-brands fa-free-code-camp"></i>
+      </a>
+      <a href="https://github.com/volkoff223">
+        <i class="fa fa-brands fa-github"></i>
+      </a>
+      <a href="https://codepen.io/volkoff223">
+        <i class="fa fa-brands fa-codepen"></i>
+      </a>
+    </div>
   </nav>
 </div>
 
 <style>
+  .icons {
+    display: flex;
+    flex-direction: column;
+  }
+  .fa {
+    margin: 10px 20px;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
   nav {
     align-items: center;
     display: flex;
@@ -47,6 +73,7 @@ const { current = "" } = Astro.props;
   nav a {
     margin-right: 20px;
     min-width: 70px;
+    white-space: nowrap;
   }
 
   .nav-logo > img {

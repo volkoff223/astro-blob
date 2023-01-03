@@ -21,6 +21,20 @@ const { current = "" } = Astro.props;
       <a class={current === "articles" ? "selected" : ""} href="/articles"
         ><li>articles</li>
       </a>
+      <a class={current === "contact" ? "selected" : ""} href="/contact"
+        ><li>contact</li>
+      </a>
+      <div class="icons">
+        <a class="icon" href="https://www.freecodecamp.org/volkoff223">
+          <i class="fa fa-brands fa-free-code-camp"></i>
+        </a>
+        <a class="icon" href="https://github.com/volkoff223">
+          <i class="fa fa-brands fa-github"></i>
+        </a>
+        <a class="icon" href="https://codepen.io/volkoff223">
+          <i class="fa fa-brands fa-codepen"></i>
+        </a>
+      </div>
     </ul>
   </div>
 </div>
@@ -98,6 +112,10 @@ const { current = "" } = Astro.props;
 
   #menuToggle input:checked ~ span:nth-child(4) {
     transform: rotate(-45deg) translate(-5px, 15px);
+  }
+
+  #menuToggle ul .icon i {
+    font-size: 50px;
   }
 
   .nav-logo > img {
