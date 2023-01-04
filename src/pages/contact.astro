@@ -20,20 +20,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         ></textarea>
         <label>Enter message here...</label>
       </div>
-
-      <button type="submit">
-        <span>Submit</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"
-          ></path>
-        </svg>
-      </button>
+      <button type="submit" class="myButton">Send it!</button>
     </form>
   </div>
 </MainLayout>
@@ -120,67 +107,28 @@ import MainLayout from "../layouts/MainLayout.astro";
     font-size: 12px;
   }
 
-  button {
-    width: 150px;
-    height: 50px;
-    background: none;
-    border: 4px solid #0071b3;
-    border-radius: 50px;
+  /* Button styles */
+  .myButton {
+    box-shadow: 0px 1px 0px 0px #1c1b18;
+    background: linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+    background-color: #eae0c2;
+    border-radius: 15px;
+    border: 2px solid #333029;
+    display: inline-block;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 100ms;
-  }
-
-  span,
-  svg {
-    position: absolute;
-    color: #ffffff;
-    fill: transparent;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    color: #0c0e09;
+    font-size: 14px;
     font-weight: bold;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
   }
-
-  button:focus {
-    outline: none;
-    border: 2px solid #1e2a78;
-    width: 50px;
-    border-left: 4px solid #1e2a78;
-    border-bottom: 4px solid #1e2a78;
-    animation: spin 2s 500ms forwards;
+  .myButton:hover {
+    background: linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+    background-color: #ccc2a6;
   }
-
-  button:focus span {
-    color: transparent;
-  }
-
-  button:focus svg {
-    animation: check 500ms 2300ms forwards;
-  }
-
-  @keyframes spin {
-    80% {
-      border: 4px solid transparent;
-      border-left: 4px solid #303a52;
-    }
-    100% {
-      transform: rotate(1080deg);
-      border: 4px solid #303a52;
-    }
-  }
-
-  @keyframes check {
-    to {
-      fill: #17b978;
-    }
-  }
-
-  @keyframes circle {
-    to {
-      border: 4px solid #303a52;
-      color: blue;
-    }
+  .myButton:active {
+    position: relative;
+    top: 1px;
   }
 </style>

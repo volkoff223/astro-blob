@@ -17,8 +17,8 @@ const { current = "" } = Astro.props;
       <a class={current === "work" ? "selected" : ""} href="/work"
         ><li>my work</li>
       </a>
-      <a class={current === "resume" ? "selected" : ""} href="/resume"
-        ><li>resume</li>
+      <a class={current === "about" ? "selected" : ""} href="/about"
+        ><li>about</li>
       </a>
       <a class={current === "articles" ? "selected" : ""} href="/articles"
         ><li>articles</li>
@@ -170,6 +170,13 @@ const { current = "" } = Astro.props;
   #menu li {
     padding: 10px 0;
     font-size: 22px;
+  }
+  li {
+    -webkit-text-stroke: 3px black;
+  }
+
+  .icon {
+    -webkit-text-stroke: 1px black;
   }
 
   #menuToggle input:checked ~ ul {
