@@ -2,20 +2,20 @@
 ---
 
 <div class="container">
-  <h2 class="phrase" id="one">Phrase 1</h2>
-  <h2 class="phrase" id="two">Phrase 2</h2>
-  <h2 class="phrase" id="three">Phrase 3</h2>
-  <h2 class="phrase" id="four">Phrase 4</h2>
+  <h2 class="phrase" id="one">Combat veteran owned small business.</h2>
+  <h2 class="phrase" id="two">No unnecessary code or complexity.</h2>
+  <h2 class="phrase" id="three">User experience and logo design.</h2>
+  <h2 class="phrase" id="four">Your web solitions company.</h2>
 </div>
 
 <style>
   .container {
     position: relative;
+    height: 100px;
   }
   .phrase {
     position: absolute;
     top: 0;
-    left: 50%;
     opacity: 0;
   }
 
@@ -31,19 +31,18 @@
     animation-delay: 10s;
   }
   #four {
-    animation: 5s 1 slidein;
-    animation-delay: 15s;
+    animation: 20s 1 finalSlidein;
+    opacity: 1;
   }
   @keyframes slidein {
     0% {
-      transform: translateY(30px) scaleY(0.2);
+      transform: translatex(-50px);
     }
     10% {
       opacity: 1;
     }
     20% {
-      transform: translateY(0);
-      transform: scaleY(1);
+      transform: translatex(0);
     }
     80% {
       opacity: 1;
@@ -52,6 +51,23 @@
     100% {
       opacity: 0;
       transform: scale(0.2);
+    }
+  }
+  @keyframes finalSlidein {
+    0% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+      transform: translatex(-50px);
+    }
+    80% {
+      opacity: 1;
+      transform: translate(0px);
+    }
+    100% {
+      transform: translateY(0);
+      transform: scaleY(1);
     }
   }
 </style>

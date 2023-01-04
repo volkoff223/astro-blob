@@ -5,14 +5,14 @@ import RotatingText from "../components/RotatingText.astro";
 
 <MainLayout title="Bone Shark" current="">
   <div class="container">
-    <h2>Welcome to</h2>
+    <h1>Welcome to</h1>
     <div class="title">
       <span class="text-gradient">Bone Shark</span>
     </div>
     <RotatingText />
     <p id="mainParagraph">
       Do more with less. Deploy your website for a fraction of the cost because
-      it ships with a fraction of the code. Most websites are built an
+      it ships with a fraction of the code. Most websites are built with an
       unnecessary amout of code. These bloated websited are slower and end up
       costing you more money.
     </p>
@@ -28,11 +28,12 @@ import RotatingText from "../components/RotatingText.astro";
     padding: 0;
   }
 
+  p {
+    font-size: large;
+  }
+
   .title {
     white-space: nowrap;
     font-size: 7rem;
-  }
-  #mainParagraph {
-    margin-top: 80px;
   }
 </style>
