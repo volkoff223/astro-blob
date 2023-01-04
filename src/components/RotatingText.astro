@@ -1,83 +1,57 @@
 ---
 ---
 
-<script>
-  let i: number = 0;
-
-  let count = function () {
-    let word = document.getElementById("words");
-    if (i < 4) {
-      word?.children[i].classList.add("rotating");
-      i++;
-    } else {
-      word?.children[i].classList.add("lastRotation");
-      word?.children[i].classList.add("visible");
-    }
-    setInterval(count, 3000);
-  };
-  count();
-  // Call the count function every 3 sec
-</script>
-
 <div class="container">
-  <div id="words">
-    <span>A combat veteran owned small business.</span>
-    <span>A user experience built to impress.</span>
-    <!-- Dont remove this span. Its a hack. -->
-    <span></span>
-    <span>Web development driven by you.</span>
-    <span>A web solutions company.</span>
-  </div>
+  <h2 class="phrase" id="one">Phrase 1</h2>
+  <h2 class="phrase" id="two">Phrase 2</h2>
+  <h2 class="phrase" id="three">Phrase 3</h2>
+  <h2 class="phrase" id="four">Phrase 4</h2>
 </div>
 
 <style>
-  span {
-    opacity: 0;
+  .container {
+    position: relative;
+  }
+  .phrase {
     position: absolute;
+    top: 0;
+    left: 50%;
+    opacity: 0;
   }
 
-  #words {
-    margin-bottom: 50px;
-    right: 50px;
+  #one {
+    animation: 5s 1 slidein;
   }
-
-  .visible {
-    opacity: 1;
+  #two {
+    animation: 5s 1 slidein;
+    animation-delay: 5s;
   }
-
-  .rotating {
-    animation: rotate 3s;
+  #three {
+    animation: 5s 1 slidein;
+    animation-delay: 10s;
   }
-
-  .lastRotation {
-    animation: lastRotate 3s;
+  #four {
+    animation: 5s 1 slidein;
+    animation-delay: 15s;
   }
-
-  @keyframes rotate {
+  @keyframes slidein {
     0% {
-      opacity: 0;
-      transform: translate3d(0, 50px, 0);
+      transform: translateY(30px) scaleY(0.2);
     }
-    20%,
+    10% {
+      opacity: 1;
+    }
+    20% {
+      transform: translateY(0);
+      transform: scaleY(1);
+    }
     80% {
       opacity: 1;
-      transform: translate3d(0, 0, 0);
+      transform: scale(1);
     }
     100% {
       opacity: 0;
-      transform: translate3d(0, -25, 0);
-    }
-  }
-
-  @keyframes lastRotate {
-    0% {
-      opacity: 0;
-      transform: translate3d(0, 50px, 0);
-    }
-    20%,
-    100% {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
+      transform: scale(0.2);
     }
   }
 </style>
