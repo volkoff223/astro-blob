@@ -1,0 +1,13 @@
+---
+import MobileNav from "../components/MobileNav.astro";
+import Head from "../components/Head.astro";
+import "../styles/global.css";
+---
+
+<Head />
+<body>
+  <MobileNav current="articles" />
+  <main>
+    <slot />
+  </main>
+</body>

@@ -1,10 +1,10 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 import Card from "../components/Card.astro";
 const posts = await Astro.glob("./posts/*.md"); // returns an array of posts that live at ./src/pages/post/*.md
 ---
 
-<Layout title="Articles" current="articles">
+<MainLayout title="Articles" current="articles">
   <main>
     <h1>
       Here you can find all of my <span class="text-gradient">ARTICLES</span>
@@ -21,7 +21,7 @@ const posts = await Astro.glob("./posts/*.md"); // returns an array of posts tha
       }
     </ul>
   </main>
-</Layout>
+</MainLayout>
 
 <style>
   .link-card-grid {

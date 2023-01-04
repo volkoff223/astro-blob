@@ -1,16 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 import Card from "../components/Card.astro";
 import ContentHeader from "../components/ContentHeader.astro";
 ---
 
-<Layout title="My Work" current="work">
+<MainLayout title="My Work" current="work">
   <main>
     <h1>
       Check out some of
       <span class="text-gradient">MY WORK</span>
     </h1>
-
     <ul role="list" class="link-card-grid">
       <Card
         imgSrc="/drumb.png"
@@ -63,7 +62,7 @@ import ContentHeader from "../components/ContentHeader.astro";
       />
     </ul>
   </main>
-</Layout>
+</MainLayout>
 
 <style>
   .link-card-grid {

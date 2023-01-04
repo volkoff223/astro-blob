@@ -34,8 +34,9 @@ const { current, title } = Astro.props as Props;
   <div id="mobileNav">
     <MobileNav current={current} />
   </div>
-
-  <slot />
+  <main>
+    <slot />
+  </main>
 </body>
 
 <style>

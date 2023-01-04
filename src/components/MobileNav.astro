@@ -4,6 +4,9 @@ const { current = "" } = Astro.props;
 ---
 
 <script></script>
+<div class="imgContainer">
+  <img id="backgroundImg" class="backgroundImg" src="/BG-Logo.png" />
+</div>
 <div class="menuToggleContainer">
   <a href="/" class="nav-logo selected"><img src="/BSNavLogo.png" /></a>
   <div id="menuToggle">
@@ -40,6 +43,21 @@ const { current = "" } = Astro.props;
 </div>
 
 <style>
+  .imgContainer {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .backgroundImg {
+    position: relative;
+    left: 9vw;
+    max-width: 114vw;
+    min-width: 79vw;
+  }
+
   .menuToggleContainer {
     display: flex;
     justify-content: space-between;
