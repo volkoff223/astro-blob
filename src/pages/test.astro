@@ -17,7 +17,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       const response = await fetch("/.netlify/functions/hello").then(
         (response) => response.json()
       );
-      responseText?.innerText = response;
+      responseText.innerText = JSON.stringify(response);
     });
   });
 </script>
